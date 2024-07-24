@@ -17,7 +17,7 @@ public class EmployeeController {
 
     @Autowired
     private EmployeeRepository employeRespository;
-    @CrossOrigin(origins = "http://localhost:5173")
+    @CrossOrigin(origins = "*")
     @GetMapping("/employees")
     public List<Employee> fetchEmployees(){
         return employeRespository.findAll();
